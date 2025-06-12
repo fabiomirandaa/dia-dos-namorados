@@ -55,9 +55,31 @@ function App() {
     setButtonPosition({ x: newX, y: newY });
   };
 
+  const FallingHearts = () => {
+    const hearts = [];
+    for (let i = 0; i < 15; i++) {
+      hearts.push(
+        <div
+          key={i}
+          className="falling-heart"
+          style={{
+            left: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 3}s`,
+            animationDuration: `${3 + Math.random() * 2}s`
+          }}
+        >
+          💖
+        </div>
+      );
+    }
+    return <div className="hearts-container">{hearts}</div>;
+  };
+
   if (showFinalMessage) {
     return (
       <div className="final-screen">
+        <FallingHearts />
+        
         <div className="final-content">
           <div className="heart">💖</div>
           <h1 className="final-title">Conseguiu! 🎉</h1>
