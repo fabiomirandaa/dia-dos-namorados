@@ -1,0 +1,47 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset para elementos de formulário */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Reset para imagens */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Reset para listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Reset para links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Melhorar rolagem no mobile */
+body {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
